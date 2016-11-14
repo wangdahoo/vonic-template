@@ -1,6 +1,6 @@
 {
   "name": "vonic-template",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Webpack Template for Vonic.",
   "author": "wangdahoo <157195705@qq.com>",
   "scripts": {
@@ -8,7 +8,7 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
-    "vonic": "^0.1.8",
+    "vonic": "^0.2.0",
     "babel-runtime": "^6.0.0"
   },
   "devDependencies": {
