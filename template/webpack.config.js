@@ -10,7 +10,10 @@ module.exports = {
   },
   resolve: {
     extensions: ['', '.js', '.vue'],
-    fallback: [path.join(__dirname, './node_modules')]
+    fallback: [path.join(__dirname, './node_modules')],
+    alias: {
+      'vonic': 'vonic/src/vonic.js'
+    }
   },
   resolveLoader: {
     root: path.join(__dirname, 'node_modules'),
