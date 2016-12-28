@@ -3837,9 +3837,9 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
-vonic@^0.6.0-alpha:
-  version "0.6.0-alpha"
-  resolved "http://registry.npm.taobao.org/vonic/download/vonic-0.6.0-alpha.tgz#ff8ece01de37ea6e3e8e86103ad8afb5abcd0bb3"
+vonic@^0.6.0-beta:
+  version "0.6.0-beta"
+  resolved "http://registry.npm.taobao.org/vonic/download/vonic-0.6.0-beta.tgz#0f587edc12a43a66e5b20b621b155ec0c1a42914"
   dependencies:
     axios "^0.15.3"
     vue "^1.0.28"
