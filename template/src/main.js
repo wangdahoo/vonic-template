@@ -5,8 +5,8 @@ import Vonic from 'vonic'
 import Index from './components/Index.vue'
 import About from './components/About.vue'
 
-// Routers
-const routers = {
+// Routes
+const routes = {
   '/': {
     component: Index
   },
@@ -16,5 +16,5 @@ const routers = {
   }
 }
 
-Vue.use(Vonic.app, {routers: routers, defaultRouterUrl: '/'})
+Vue.use(Vonic.app, {routes: routes, defaultRouteUrl: '/'})
 
