@@ -8,56 +8,45 @@ module.exports = {
     publicPath: '/dist/',
     filename: 'build.js'
   },
-  resolve: {
-    extensions: ['', '.js', '.vue'],
-    fallback: [path.join(__dirname, './node_modules')],
-    alias: {
-      'vonic': 'vonic/src/vonic.js'
-    }
-  },
-  resolveLoader: {
-    root: path.join(__dirname, 'node_modules'),
-  },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.vue$/,
-        loader: 'vue'
+        loader: 'vue-loader',
+        options: {
+          loaders: {
+            scss: 'vue-style-loader!css-loader!sass-loader'
+          }
+        }
       },
       {
         test: /\.js$/,
-        loader: 'babel',
+        loader: 'babel-loader',
         exclude: /node_modules/
       },
       {
-        test: /\.json$/,
-        loader: 'json'
-      },
-      {
-        test: /\.html$/,
-        loader: 'vue-html'
+        test: /\.css$/,
+        loader: 'style-loader!css-loader'
       },
       {
         test: /\.(png|jpg|gif|svg)|((eot|woff|ttf|svg)[\?]?.*)$/,
-        loader: 'url',
+        loader: 'url-loader',
         query: {
           limit: 10000,
           name: '[name].[ext]?[hash]'
         }
       },
+
       {
-        test: /vonic.src.*?js$/,
-        loader: 'babel'
-      },
-      {
-        test: /vue\-scroller.src.*?js$/,
-        loader: 'babel'
+        test: /vue-scroller.src.*?js$/,
+        loader: 'babel-loader'
       }
     ]
   },
-  vue: {
-    loaders: {
-      scss: 'style!css!sass',
+  resolve: {
+    extensions: ['.js', '.vue'],
+    alias: {
+      'vue$': 'vue/dist/vue.common.js'
     }
   },
   devServer: {

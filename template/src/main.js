@@ -1,20 +1,16 @@
 import Vue from 'vue'
-import Vonic from 'vonic'
+import Vonic from 'vonic/src/vonic.js'
 
 // Page Components
 import Index from './components/Index.vue'
 import About from './components/About.vue'
 
 // Routes
-const routes = {
-  '/': {
-    component: Index
-  },
+const routes = [
+  { path: '/', component: Index },
+  { path: '/about', component: About }
+]
 
-  '/about': {
-    component: About
-  }
-}
-
-Vue.use(Vonic.app, {routes: routes, defaultRouteUrl: '/'})
-
+Vue.use(Vonic.app, {
+  routes: routes
+})

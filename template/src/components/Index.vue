@@ -3,9 +3,9 @@
     <div class="page-content text-center">
       <h2 class="padding" v-text="msg"></h2>
 
-      <md-button class="button button-assertive" v-link="{path: '/about'}">
+      <router-link class="button button-assertive" to="/about">
         <i class="ion-information-circled"></i> About
-      </md-button>
+      </router-link>
     </div>
   </div>
 </template>
