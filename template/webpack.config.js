@@ -38,6 +38,10 @@ module.exports = {
       },
 
       {
+        test: /vonic.src.*?js$/,
+        loader: 'babel-loader'
+      },
+      {
         test: /vue-scroller.src.*?js$/,
         loader: 'babel-loader'
       }
@@ -66,10 +70,10 @@ if (process.env.NODE_ENV === 'production') {
       }
     }),
     new webpack.optimize.UglifyJsPlugin({
+      sourceMap: true,
       compress: {
         warnings: false
       }
-    }),
-    new webpack.optimize.OccurenceOrderPlugin()
+    })
   ])
 }
