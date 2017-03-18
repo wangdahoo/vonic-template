@@ -25,8 +25,8 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /\.css$/,
-        loader: 'style-loader!css-loader'
+        test: /\.scss$/,
+        loader: 'style-loader!css-loader!sass-loader'
       },
       {
         test: /\.(png|jpg|gif|svg)|((eot|woff|ttf|svg)[\?]?.*)$/,
@@ -35,15 +35,6 @@ module.exports = {
           limit: 10000,
           name: '[name].[ext]?[hash]'
         }
-      },
-
-      {
-        test: /vonic.src.*?js$/,
-        loader: 'babel-loader'
-      },
-      {
-        test: /vue-scroller.src.*?js$/,
-        loader: 'babel-loader'
       }
     ]
   },
